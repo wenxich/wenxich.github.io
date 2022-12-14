@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka+One&family=Josefin+Sans:wght@400;600&display=swap");
+
+/** overall site theme **/
+
+body {
+    background: white;
+    color: black;
+    font-family: "DM Mono";
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+::selection {
+    background: black;
+    color: white;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    background: black;
+    color: white;
+}
+
+/** container **/
+
+#container {
+    width: 55vw;
+    height: 100vh;
+    margin: auto;
+}
+
+/** header **/
+
+.header {
+    padding-top: 10vh;
+    margin-bottom: 2.5vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#name {
+    font-size: 5vh;
+    font-weight: 500;
+}
+
+#links {
+    font-size: 2.5vh;
+    font-weight: 500;
+    line-height: 2.75vw;
+}
+
+#description {
+    font-size: 2vh;
+    font-weight: 500;
+    margin-bottom: 2vh;
+}
+
+/** section **/
+
+.accordion {
+    cursor: pointer;
+    font-family: "DM Mono";
+    background: transparent;
+    color: black;
+    font-size: 3.5vh;
+    padding: 0.85vw 0;
+    border: 0;
+    width: 100%;
+    text-align: left;
+    border-bottom: 0.15vw solid black;
+    transition: 0.4s;
+    margin: 1.5vh 0;
+}
+
+.accordion:hover {
+    background-color: black;
+    color: white;
+}
+
+.panel {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.6vw;
+    row-gap: 0.6vw;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 2vh;
+}
+
+.image {
+    max-height: 35vh;
+    max-width: 25vw;
+    object-fit: contain;
+}
+
+#spacer {
+    height: 5vh;
+}
+
+@media screen and (max-width: 1080px) {
+    #container {
+        width: 80vw;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .image {
+        max-height: none;
+        max-width: 80vw;
+    }
+
+    #links {
+        line-height: normal;
+    }
+
+    .accordion {
+        border-bottom: 0.75vw solid black;
+    }
+
+    .panel {
+        display: block;
+    }
+}
