@@ -5,7 +5,7 @@
 body {
     background: white;
     color: black;
-    font-family: "DM Mono";
+    font-family: "DM Mono", monospace;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -65,7 +65,7 @@ a:hover {
 
 .accordion {
     cursor: pointer;
-    font-family: "DM Mono";
+    font-family: "DM Mono", monospace;
     background: transparent;
     color: black;
     font-size: 3.5vh;
@@ -132,7 +132,7 @@ figcaption {
     }
 
     .accordion {
-        border-bottom: 0.75vw solid black;
+        border-bottom: 0.3vw solid black;
     }
 
     .panel {
