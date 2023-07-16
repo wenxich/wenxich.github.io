@@ -14,3 +14,12 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+// timezone
+const timeDiv = document.getElementById("timezone");
+function setTime() {
+    timeDiv.innerHTML = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: 'numeric', minute:'2-digit' });
+}
+setInterval(function() {
+    setTime();
+}, 1000);

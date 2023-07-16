@@ -139,3 +139,7 @@ figcaption {
         display: block;
     }
 }
+
+#timezone {
+    display: inline;
+}
