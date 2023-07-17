@@ -26,15 +26,12 @@ a:hover {
     color: white;
 }
 
-/** container **/
-
-#container {
-    width: 55vw;
-    height: 100vh;
-    margin: auto;
-}
-
 /** header **/
+
+#header-section {
+    width: 80vw;
+    margin: auto auto 5vh;
+}
 
 .header {
     padding-top: 10vh;
@@ -77,7 +74,7 @@ a:hover {
 
 /** section **/
 
-.accordion {
+/** .accordion {
     cursor: pointer;
     font-family: "DM Mono", monospace;
     background: transparent;
@@ -95,17 +92,52 @@ a:hover {
 .accordion:hover {
     background-color: black;
     color: white;
+} **/
+
+#filters-section {
+    font-size: 2.5vh;
+    border-top: 2px solid black;
+    padding-top: 4.5vh;
+    text-align: center;
 }
 
-.panel {
+#filters-wrapper {
+    width: 80vw;
+    margin: auto;
+}
+
+.filter {
+    background: none;
+    color: black;
+    font-family: "DM Mono", monospace;
+    font-size: 2.5vh;
+    border: none;
+    cursor: pointer;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.filter.active::before {
+    content: url(images/open_eye.svg);
+}
+
+.filter::before {
+    content: url(images/closed_eye.svg);
+}
+
+/** projects **/
+
+#projects-section {
     display: flex;
-    max-height: 0;
+    /*max-height: 0;*/
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 0.6vw;
-    row-gap: 0.6vw;
+    column-gap: 1.5vmax;
+    row-gap: 1.5vmax;
+    padding-top: 4.5vh;
+    margin-bottom: 5vh;
 }
 
 .image {
@@ -113,16 +145,16 @@ a:hover {
     object-fit: cover;
 }
 
-#spacer {
-    height: 5vh;
-}
-
 .project-wrapper {
     border: 2px solid black;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 25vw;
     transition: 0.4s;
+}
+
+.show {
+    display: flex;
 }
 
 .project-wrapper:hover {
@@ -169,7 +201,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1080px) {
-    #container {
+    #header-section {
         width: 80vw;
     }
 

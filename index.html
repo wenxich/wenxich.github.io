@@ -8,7 +8,7 @@
     <link href="style.css" media="all" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="container">
+<div id="header-section">
     <div class="header">
         <div id="name">Wenxi Chen</div>
         <div id="links">
@@ -19,115 +19,144 @@
 
     <div id="description">
         <ul>
-        <li>Candidate for B.A.S. in Computer Science @ <a href="https://www.upenn.edu/">UPenn</a></li>
-        <li>Research Assistant @ <a href="https://psl.design.upenn.edu/">Polyhedral Structures Laboratory</a> &
-            <a href="https://penn-wonderlab.github.io/">Penn Wonder Lab</a></li>
-        <li>You can reach me @
-            <a
-                    onclick="window.prompt('email me at:', 'chenwx@seas.upenn.edu')"
-                    style="text-decoration: underline; cursor: pointer"
-            >chenwx@seas.upenn.edu</a> <div id="timezone"></div></li>
+            <li>Candidate for B.A.S. in Computer Science @ <a href="https://www.upenn.edu/">UPenn</a></li>
+            <li>Research Assistant @ <a href="https://psl.design.upenn.edu/">Polyhedral Structures Laboratory</a> &
+                <a href="https://penn-wonderlab.github.io/">Penn Wonder Lab</a></li>
+            <li>You can reach me @
+                <a
+                        onclick="window.prompt('email me at:', 'chenwx@seas.upenn.edu')"
+                        style="text-decoration: underline; cursor: pointer"
+                >chenwx@seas.upenn.edu</a>
+                <div id="timezone"></div>
+            </li>
         </ul>
     </div>
-
-    <button class="accordion">> programming</button>
-    <div class="panel">
-        <div class="project-wrapper">
-            <img class="image" src="images/synthesis.gif" alt="The Synthesis Lab"/>
-            <div class="text-wrapper">
-                <span class="project-title">The Synthesis Lab</span>
-                <a href="https://h-synthesizer.web.app/" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> Vue.js, Firebase</span>
-            </div>
-        </div>
-        <div class="project-wrapper">
-            <img class="image" src="images/i3dgs.gif" alt="i3DGS"/>
-            <div class="text-wrapper">
-                <span class="project-title">i3DGS</span>
-                <a href="https://github.com/PolyhedralStructuresLaboratory/i3dgs" class="button">Code</a> <a href="https://i3dgs.com/" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> JavaScript, Tweakpane, jQuery</span>
-            </div>
-        </div>
-        <div class="project-wrapper">
-            <img class="image" src="images/snake.gif" alt="Snake"/>
-            <div class="text-wrapper">
-                <span class="project-title">Snake</span>
-                <a href="https://github.com/wenxich/snake" class="button">Code</a>
-
-                <br><span class="project-desc"><i>Made with:</i> Java, Java Swing</span>
-            </div>
-        </div>
-    </div>
-
-    <button class="accordion">> tools</button>
-    <div class="panel">
-        <div class="project-wrapper">
-            <img class="image" src="images/selector.gif" alt="Avatar Selector"/>
-            <div class="text-wrapper">
-                <span class="project-title">Avatar Selector</span>
-                <a href="https://artofweb.neocities.org/s2/a2.html" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> only HTML/CSS</span>
-            </div>
-        </div>
-        <div class="project-wrapper">
-            <img class="image" src="images/3dre.gif" alt="3D Render Engine"/>
-            <div class="text-wrapper">
-                <span class="project-title">3D Render Engine</span>
-                <a href="https://github.com/wenxich/3d-render-engine" class="button">Code</a>
-
-                <br><span class="project-desc"><i>Made with:</i> Java, Java Swing</span>
-            </div>
-        </div>
-        <div class="project-wrapper">
-            <img class="image" src="images/essentials.gif" alt="Student Essentials"/>
-            <div class="text-wrapper">
-                <span class="project-title">Student Essentials</span>
-                <a href="https://github.com/wenxich/student-essentials" class="button">Code</a> <a href="https://essentials.neocities.org/" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> JavaScript, HTML/CSS</span>
-            </div>
-        </div>
-    </div>
-
-    <button class="accordion">> playground</button>
-    <div class="panel">
-        <div class="project-wrapper">
-            <img class="image" src="images/patm.gif" alt="Pay Attention to Me"/>
-            <div class="text-wrapper">
-                <span class="project-title">Pay Attention to Me</span>
-                <a href="https://artofweb.neocities.org/s3/a1" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> JavaScript, HTML/CSS</span>
-            </div>
-        </div>
-        <div class="project-wrapper">
-            <img class="image" src="images/typing.gif" alt="Typing..."/>
-            <div class="text-wrapper">
-                <span class="project-title">Typing...</span>
-                <a href="https://artofweb.neocities.org/s3/final.html" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> p5.js</span>
-            </div>
-        </div>
-        <div class="project-wrapper">
-            <img class="image" src="images/per.gif" alt='My "Personal" Site'/>
-            <div class="text-wrapper">
-                <span class="project-title">My "Personal" Site</span>
-                <a href="https://artofweb.neocities.org/s1/final.html" class="button">Site</a>
-
-                <br><span class="project-desc"><i>Made with:</i> only HTML/CSS</span>
-            </div>
-        </div>
-    </div>
-
-    <div id="spacer"></div>
 </div>
 
-<script src="index.js"></script>
+<div id="filters-section">
+    <div id="filters-wrapper">
+        <button class="filter active" onclick="filterSelection('all')"> All</button>
+        <button class="filter" onclick="filterSelection('programming')"> Programming</button>
+        <button class="filter" onclick="filterSelection('tools')"> Tools</button>
+        <button class="filter" onclick="filterSelection('playground')"> Playground</button>
+    </div>
+</div>
+
+<div id="projects-section">
+    <div class="project-wrapper programming">
+        <img alt="The Synthesis Lab" class="image" src="images/synthesis.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">The Synthesis Lab</span>
+            <a class="button" href="https://h-synthesizer.web.app/">Site</a>
+
+            <span class="project-desc">
+                <br>Current, Developing @ <a href="https://penn-wonderlab.github.io/">PWL</a>
+                <br>> <i>Made with:</i> Vue.js, Firebase
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper programming">
+        <img alt="i3DGS" class="image" src="images/i3dgs.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">i3DGS</span>
+            <a class="button" href="https://github.com/PolyhedralStructuresLaboratory/i3dgs">Code</a> <a
+                class="button" href="https://i3dgs.com/">Site</a>
+
+            <span class="project-desc">
+                <br>Current, Developing @ <a href="https://penn-wonderlab.github.io/">PSL</a>
+                <br>> <i>Made with:</i> JavaScript, Tweakpane, jQuery
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper programming">
+        <img alt="Snake" class="image" src="images/snake.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">Snake</span>
+            <a class="button" href="https://github.com/wenxich/snake">Code</a>
+
+            <span class="project-desc">
+                <br>2021, CIS 1200 Final Project</a>
+                <br>> <i>Made with:</i> Java, Java Swing
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper tools">
+        <img alt="3D Render Engine" class="image" src="images/3dre.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">3D Render Engine</span>
+            <a class="button" href="https://github.com/wenxich/3d-render-engine">Code</a>
+
+            <span class="project-desc">
+                <br>2022, Personal Project</a>
+                <br>> <i>Made with:</i> Java, Java Swing
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper playground">
+        <img alt="Pay Attention to Me" class="image" src="images/patm.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">Pay Attention to Me</span>
+            <a class="button" href="https://artofweb.neocities.org/s3/a1">Site</a>
+
+            <span class="project-desc">
+                <br>2022, DSGN 1020 Project</a>
+                <br>> <i>Made with:</i> JavaScript, HTML/CSS
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper playground">
+        <img alt="Typing..." class="image" src="images/typing.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">Typing...</span>
+            <a class="button" href="https://artofweb.neocities.org/s3/final.html">Site</a>
+
+            <span class="project-desc">
+                <br>2022, DSGN 1020 Project</a>
+                <br>> <i>Made with:</i> p5.js
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper tools">
+        <img alt="Avatar Selector" class="image" src="images/selector.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">Avatar Selector</span>
+            <a class="button" href="https://artofweb.neocities.org/s2/a2.html">Site</a>
+
+            <span class="project-desc">
+                <br>2022, DSGN 1020 Project</a>
+                <br>> <i>Made with:</i> only HTML/CSS
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper playground">
+        <img alt='My "Personal" Site' class="image" src="images/per.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">My "Personal" Site</span>
+            <a class="button" href="https://artofweb.neocities.org/s1/final.html">Site</a>
+
+            <span class="project-desc">
+                <br>2022, DSGN 1020 Project</a>
+                <br>> <i>Made with:</i> only HTML/CSS
+            </span>
+        </div>
+    </div>
+    <div class="project-wrapper tools">
+        <img alt="Student Essentials" class="image" src="images/essentials.gif"/>
+        <div class="text-wrapper">
+            <span class="project-title">Student Essentials</span>
+            <a class="button" href="https://github.com/wenxich/student-essentials">Code</a> <a
+                class="button" href="https://essentials.neocities.org/">Site</a>
+
+            <span class="project-desc">
+                <br>2021, Personal Project</a>
+                <br>> <i>Made with:</i> JavaScript, HTML/CSS
+            </span>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>
