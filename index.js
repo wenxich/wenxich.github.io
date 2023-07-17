@@ -1,20 +1,3 @@
-// accordion
-
-/** var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-} **/
-
 // timezone
 const timeDiv = document.getElementById("timezone");
 let myTime;
@@ -59,8 +42,7 @@ function w3RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
-let btnContainer = document.getElementById("filters-wrapper");
+let btnContainer = document.getElementById("filters-wrapper"); // add active class to the current button
 let btns = btnContainer.getElementsByClassName("filter");
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(){

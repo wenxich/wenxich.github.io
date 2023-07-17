@@ -72,28 +72,6 @@ a:hover {
     display: inline;
 }
 
-/** section **/
-
-/** .accordion {
-    cursor: pointer;
-    font-family: "DM Mono", monospace;
-    background: transparent;
-    color: black;
-    font-size: 3.5vh;
-    padding: 0.85vw 0;
-    border: 0;
-    width: 100%;
-    text-align: left;
-    border-bottom: 0.15vw solid black;
-    transition: 0.4s;
-    margin: 1.5vh 0;
-}
-
-.accordion:hover {
-    background-color: black;
-    color: white;
-} **/
-
 #filters-section {
     font-size: 2.5vh;
     border-top: 2px solid black;
@@ -224,8 +202,12 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-
     .project-wrapper {
         min-width: 90%;
+    }
+
+    .image {
+        height: 40vh;
+        object-fit: cover;
     }
 }
