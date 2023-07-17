@@ -181,7 +181,6 @@ a:hover {
     background: black;
 }
 
-
 .button {
     font-family: "DM Mono", monospace;
     padding: 0 1vh 0 1vh;
@@ -217,10 +216,6 @@ a:hover {
 
     #links {
         line-height: normal;
-    }
-
-    .accordion {
-        border-bottom: 0.3vw solid black;
     }
 
     .project-wrapper {
