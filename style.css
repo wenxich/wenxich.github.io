@@ -2,10 +2,20 @@
 
 /** overall site theme **/
 
+.monospace-font {
+    --text-font: "DM Mono", monospace;
+    --bold-weight: 500;
+}
+
+.sans-serif-font {
+    --text-font: Helvetica, sans-serif;
+    --bold-weight: 600;
+}
+
 body {
     background: white;
     color: black;
-    font-family: "DM Mono", monospace;
+    font-family: var(--text-font);
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -43,18 +53,17 @@ a:hover {
 
 #name {
     font-size: 5vh;
-    font-weight: 500;
+    font-weight: var(--bold-weight);
 }
 
 #links {
     font-size: 2.5vh;
-    font-weight: 500;
+    font-weight: var(--bold-weight);
     line-height: 2.75vw;
 }
 
 #description {
     font-size: 2vh;
-    font-weight: 500;
     margin-bottom: 2vh;
     width: 100%;
 }
@@ -72,6 +81,23 @@ a:hover {
     display: inline;
 }
 
+#font-changer {
+    background: black;
+    color: white;
+    font-family: var(--text-font);
+    font-size: 2vh;
+    border: none;
+    cursor: pointer;
+}
+
+#font-changer:hover {
+    background: none;
+    color: black;
+    text-decoration: underline;
+}
+
+/** filters **/
+
 #filters-section {
     font-size: 2.5vh;
     border-top: 2px solid black;
@@ -87,7 +113,7 @@ a:hover {
 .filter {
     background: none;
     color: black;
-    font-family: "DM Mono", monospace;
+    font-family: var(--text-font);
     font-size: 2.5vh;
     border: none;
     cursor: pointer;
@@ -131,17 +157,28 @@ a:hover {
     transition: 0.4s;
 }
 
-.show {
-    display: flex;
-}
-
 .project-wrapper:hover {
     background: black;
     color: white;
 }
 
+.project-wrapper:hover a {
+    background: none;
+    color: white;
+    transition: 0.4s;
+}
+
+.project-wrapper:hover a:hover {
+    background: white;
+    color: black;
+}
+
+.show {
+    display: flex;
+}
+
 .project-title {
-    font-weight: 500;
+    font-weight: var(--bold-weight);
     font-size: 2vh;
 }
 
@@ -160,7 +197,7 @@ a:hover {
 }
 
 .button {
-    font-family: "DM Mono", monospace;
+    font-family: var(--text-font);
     padding: 0 1vh 0 1vh;
     font-size: 2vh;
     background-color: black;
@@ -174,8 +211,9 @@ a:hover {
 .button:hover {
     background-color: white;
     color: black;
-    font-weight: 500;
 }
+
+/** media queries **/
 
 @media screen and (max-width: 1080px) {
     #header-section {

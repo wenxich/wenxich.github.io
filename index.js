@@ -51,3 +51,17 @@ for (let i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
+// font change
+let fontChanger;
+let monospaceMode = true;
+function changeFont() {
+    monospaceMode = !monospaceMode;
+    document.body.classList.toggle('sans-serif-font');
+    fontChanger = document.getElementById("font-changer");
+    if (monospaceMode) {
+        fontChanger.innerHTML = "Switch to sans-serif mode."
+    } else {
+        fontChanger.innerHTML = "Switch back to monospace mode."
+    }
+}
