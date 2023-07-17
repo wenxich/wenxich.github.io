@@ -17,8 +17,10 @@ for (i = 0; i < acc.length; i++) {
 
 // timezone
 const timeDiv = document.getElementById("timezone");
+let myTime;
 function setTime() {
-    timeDiv.innerHTML = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: 'numeric', minute:'2-digit' });
+    myTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: 'numeric', minute:'2-digit' });
+    timeDiv.innerHTML = "(it's currently "+myTime+" for me)";
 }
 setInterval(function() {
     setTime();

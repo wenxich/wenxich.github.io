@@ -170,7 +170,7 @@ a:hover {
 
     .image {
         max-height: none;
-        max-width: 80vw;
+        max-width: 100%;
     }
 
     #links {
@@ -181,7 +181,14 @@ a:hover {
         border-bottom: 0.3vw solid black;
     }
 
-    .panel {
-        display: block;
+    .project-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .project-wrapper {
+        min-width: 90%;
     }
 }
