@@ -61,6 +61,10 @@ a:hover {
     margin-bottom: 2vh;
 }
 
+#timezone {
+    display: inline;
+}
+
 /** section **/
 
 .accordion {
@@ -94,22 +98,64 @@ a:hover {
     row-gap: 0.6vw;
 }
 
-figure {
-    margin: 0;
-}
-
-figcaption {
-    font-size: 2vh;
-}
-
 .image {
-    max-height: 35vh;
-    max-width: 25vw;
-    object-fit: contain;
+    height: 25vh;
+    object-fit: cover;
 }
 
 #spacer {
     height: 5vh;
+}
+
+.project-wrapper {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    transition: 0.4s;
+}
+
+.project-wrapper:hover {
+    background: black;
+    color: white;
+}
+
+.project-title {
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+.project-desc {
+    font-size: 1.8vh;
+}
+
+.text-wrapper {
+    padding: 10px;
+}
+
+.project-button {
+    font-size: 2vh;
+    color: white;
+    background: black;
+}
+
+
+.button {
+    font-family: "DM Mono", monospace;
+    padding: 0 1vh 0 1vh;
+    font-size: 2vh;
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: white;
+    color: black;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 1080px) {
@@ -138,8 +184,4 @@ figcaption {
     .panel {
         display: block;
     }
-}
-
-#timezone {
-    display: inline;
 }
