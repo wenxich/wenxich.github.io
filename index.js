@@ -3,7 +3,7 @@ const timeDiv = document.getElementById("timezone");
 let myTime;
 
 function setTime() {
-    myTime = new Date().toLocaleTimeString("en-US", {timeZone: "America/New_York", hour: 'numeric', minute: '2-digit'});
+    myTime = new Date().toLocaleTimeString("en-US", {timeZone: "Asia/Shanghai", hour: 'numeric', minute: '2-digit'});
     timeDiv.innerHTML = "(it's currently " + myTime + " for me)";
 }
 
