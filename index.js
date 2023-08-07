@@ -78,7 +78,7 @@ function changeFont() {
     if (monospaceMode) {
         fontChanger.innerHTML = "Switch to sans-serif mode."
     } else {
-        fontChanger.innerHTML = "Switch back to monospace mode."
+        fontChanger.innerHTML = "Switch to monospace mode."
     }
 }
 
@@ -88,7 +88,6 @@ let gifMode = true;
 function changeImgSrc() {
     gifMode = !gifMode;
     for (let image of document.getElementsByClassName("image")) {
-        // 3dre.gif
         oldSrc = image.src;
         if (oldSrc.substring(oldSrc.length - 3, oldSrc.length) === "gif") {
             image.src = oldSrc.substring(0, oldSrc.length - 3) + "png";
