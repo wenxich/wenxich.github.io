@@ -145,6 +145,7 @@ a:hover {
 }
 
 .image {
+    display: none;
     height: 25vh;
     object-fit: cover;
 }
