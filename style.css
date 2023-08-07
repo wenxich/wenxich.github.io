@@ -40,7 +40,7 @@ a:hover {
 
 #header-section {
     width: 70vw;
-    margin: auto auto 5vh;
+    margin: auto auto 4.5vh;
 }
 
 .header {
@@ -64,7 +64,6 @@ a:hover {
 
 #description {
     font-size: 2vh;
-    margin-bottom: 2vh;
     width: 100%;
 }
 
@@ -81,16 +80,18 @@ a:hover {
     display: inline;
 }
 
-#font-changer {
+.aBtn {
     background: black;
     color: white;
     font-family: var(--text-font);
     font-size: 2vh;
     border: 1px solid black;
     cursor: pointer;
+    margin-bottom: 0.75vh;
+    text-align: left;
 }
 
-#font-changer:hover {
+.aBtn:hover {
     background: none;
     color: black;
 }

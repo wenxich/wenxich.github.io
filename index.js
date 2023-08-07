@@ -71,3 +71,25 @@ function changeFont() {
         fontChanger.innerHTML = "Switch back to monospace mode."
     }
 }
+
+// img change
+let srcChanger, oldSrc;
+let gifMode = true;
+function changeImgSrc() {
+    gifMode = !gifMode;
+    for (let image of document.getElementsByClassName("image")) {
+        // 3dre.gif
+        oldSrc = image.src;
+        if (oldSrc.substring(oldSrc.length - 3, oldSrc.length) === "gif") {
+            image.src = oldSrc.substring(0, oldSrc.length - 3) + "png";
+        } else {
+            image.src = oldSrc.substring(0, oldSrc.length - 3) + "gif";
+        }
+    }
+    srcChanger = document.getElementById("src-changer");
+    if (gifMode) {
+        srcChanger.innerHTML = "Stop the GIFs!"
+    } else {
+        srcChanger.innerHTML = "Animate the PNGs!"
+    }
+}
