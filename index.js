@@ -1,11 +1,11 @@
 // load accessibility buttons after content loaded
 window.onload = () => {
-    document.getElementById("accessibility-buttons").innerHTML =
-        '<button class="aBtn" id="font-changer" onclick="changeFont()">Switch to sans-serif mode.</button>\n' +
-        '<button class="aBtn" id="src-changer" onclick="changeImgSrc()">Stop the GIFs!</button>';
     for (let i of document.getElementsByClassName("image")) {
         i.style.display = "block";
     }
+    document.getElementById("accessibility-buttons").innerHTML =
+        '<button class="aBtn" id="font-changer" onclick="changeFont()">Switch to sans-serif mode.</button>\n' +
+        '<button class="aBtn" id="src-changer" onclick="changeImgSrc()">Stop the GIFs!</button>';
 };
 
 // timezone
