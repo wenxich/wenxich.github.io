@@ -1,3 +1,10 @@
+// load accessibility buttons after content loaded
+window.onload = () => {
+    document.getElementById("accessibility-buttons").innerHTML =
+        '<button class="aBtn" id="font-changer" onclick="changeFont()">Switch to sans-serif mode.</button>\n' +
+        '<button class="aBtn" id="src-changer" onclick="changeImgSrc()">Stop the GIFs!</button>';
+};
+
 // timezone
 const timeDiv = document.getElementById("timezone");
 let myTime;
@@ -17,7 +24,7 @@ filterSelection("all")
 function filterSelection(c) {
     let x, i;
     x = document.getElementsByClassName("project-wrapper");
-    if (c == "all") c = "";
+    if (c === "all") c = "";
     for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
@@ -29,7 +36,7 @@ function w3AddClass(element, name) {
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
+        if (arr1.indexOf(arr2[i]) === -1) {
             element.className += " " + arr2[i];
         }
     }
@@ -72,7 +79,7 @@ function changeFont() {
     }
 }
 
-// img change
+// img src change
 let srcChanger, oldSrc;
 let gifMode = true;
 function changeImgSrc() {
