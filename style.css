@@ -65,6 +65,7 @@ a:hover {
 #description {
     font-size: 2vh;
     width: 100%;
+    line-height: 1.5em;
 }
 
 #description ul {
@@ -188,7 +189,7 @@ a:hover {
 }
 
 .text-wrapper {
-    padding: 10px;
+    padding: 1.2em;
 }
 
 .project-button {
