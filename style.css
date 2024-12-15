@@ -157,22 +157,7 @@ a:hover {
     flex-direction: column;
     width: 25vw;
     transition: 0.4s;
-}
-
-.project-wrapper:hover {
-    background: black;
-    color: white;
-}
-
-.project-wrapper:hover a {
-    background: none;
-    color: white;
-    transition: 0.4s;
-}
-
-.project-wrapper:hover a:hover {
-    background: white;
-    color: black;
+    max-height: fit-content;
 }
 
 .show {
@@ -184,8 +169,44 @@ a:hover {
     font-size: 2vh;
 }
 
+input[type="checkbox"] {
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    content: url(images/closed_eye.svg);
+}
+input[type="checkbox"]:checked {
+    appearance: none;
+    -webkit-appearance: none;
+    content: url(images/open_eye.svg);
+}
+
+.project-details {
+    font-size: 1.8vh;
+}
+
+.project-desc-control {
+    padding-top: 1em;
+}
+
+.project-desc-control:hover {
+    cursor: pointer;
+}
+
+.project-desc-control-label {
+    font-size: 2vh;
+    font-weight: var(--bold-weight);
+}
+
+.project-desc-control:checked + .project-desc {
+    max-height: initial;
+}
+
 .project-desc {
     font-size: 1.8vh;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0.2em;
 }
 
 .text-wrapper {
