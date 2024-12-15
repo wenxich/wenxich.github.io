@@ -40,30 +40,30 @@ a:hover {
 
 #header-section {
     width: 70vw;
-    margin: auto auto 4.5vh;
+    margin: auto auto 2em;
 }
 
 .header {
-    padding-top: 10vh;
-    margin-bottom: 2.5vh;
+    padding-top: 4em;
+    margin-bottom: 0.5em;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
 
 #name {
-    font-size: 5vh;
+    font-size: 2.1em;
     font-weight: var(--bold-weight);
 }
 
 #links {
-    font-size: 2.5vh;
+    font-size: 1.1em;
     font-weight: var(--bold-weight);
-    line-height: 2.75vw;
+    line-height: 2em;
 }
 
 #description {
-    font-size: 2vh;
+    font-size: 0.875em;
     width: 100%;
     line-height: 1.5em;
 }
@@ -85,10 +85,10 @@ a:hover {
     background: black;
     color: white;
     font-family: var(--text-font);
-    font-size: 2vh;
+    font-size: 1em;
     border: 1px solid black;
     cursor: pointer;
-    margin-bottom: 0.75vh;
+    margin-bottom: 0.2em;
     text-align: left;
 }
 
@@ -100,9 +100,9 @@ a:hover {
 /** filters **/
 
 #filters-section {
-    font-size: 2.5vh;
+    font-size: 1.05em;
     border-top: 2px solid black;
-    padding-top: 4.5vh;
+    padding-top: 2em;
     text-align: center;
 }
 
@@ -115,7 +115,7 @@ a:hover {
     background: none;
     color: black;
     font-family: var(--text-font);
-    font-size: 2.5vh;
+    font-size: 1.05em;
     border: none;
     cursor: pointer;
     margin-left: 0.5vw;
@@ -141,13 +141,13 @@ a:hover {
     justify-content: center;
     column-gap: 1.5vmax;
     row-gap: 1.5vmax;
-    padding-top: 4.5vh;
-    margin-bottom: 5vh;
+    padding-top: 2em;
+    margin-bottom: 2em;
 }
 
 .image {
     display: none;
-    height: 25vh;
+    height: 10.5em;
     object-fit: cover;
 }
 
@@ -166,7 +166,7 @@ a:hover {
 
 .project-title {
     font-weight: var(--bold-weight);
-    font-size: 2vh;
+    font-size: 0.875em;
 }
 
 input[type="checkbox"] {
@@ -182,7 +182,7 @@ input[type="checkbox"]:checked {
 }
 
 .project-details {
-    font-size: 1.8vh;
+    font-size: 0.82em;
 }
 
 .project-desc-control {
@@ -194,7 +194,7 @@ input[type="checkbox"]:checked {
 }
 
 .project-desc-control-label {
-    font-size: 2vh;
+    font-size: 0.875em;
     font-weight: var(--bold-weight);
 }
 
@@ -203,7 +203,7 @@ input[type="checkbox"]:checked {
 }
 
 .project-desc {
-    font-size: 1.8vh;
+    font-size: 0.82em;
     max-height: 0;
     overflow: hidden;
     margin-top: 0.2em;
@@ -214,17 +214,16 @@ input[type="checkbox"]:checked {
 }
 
 .project-button {
-    font-size: 2vh;
+    font-size: 0.875em;
     color: white;
     background: black;
 }
 
 .button {
     font-family: var(--text-font);
-    padding: 0 1vh 0 1vh;
-    font-size: 2vh;
+    padding: 0 0.45em 0 0.45em;
+    font-size: 0.85em;
     background-color: black;
-    border: none;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -275,7 +274,6 @@ input[type="checkbox"]:checked {
     }
 
     .image {
-        height: 40vh;
-        object-fit: cover;
+        height: auto;
     }
 }
